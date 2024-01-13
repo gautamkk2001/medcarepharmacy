@@ -1,0 +1,324 @@
+
+<!--
+  Title : MedCare - Pharmacy
+  Author: Gautam
+  Created at : Febrary 2023
+  Updated at : 13/06/2023
+  Comments  :  -
+  Reviewed by : Gautam
+  Reviewed at  : 13/06/2023 -->
+
+
+<!-- .................................................................................................navigation bar.......................................................................................... -->
+<app-navbar></app-navbar>
+
+
+<!-- .................................................................................................banner image............................................................................................ -->
+
+
+<div class="img-slider">
+  <ng-image-slider [images]="imgCollection" [imageSize]="{ width: '100%', height:'500px'}">
+  </ng-image-slider>
+</div>
+
+<!-- dropdown -->
+<div class="wrapper">
+  <nav>
+    <ul class="">
+      <li class="dropdown1"><a>Medicine</a>
+         <ul class="menu-area">
+          <ul>
+             <h4>A</h4>
+             <li><a>Glucometers</a></li>
+            <li><a>Sugar Substitutes</a></li>
+            <li><a>Diabetes Management Supplements</a></li>
+            <li><a>Diabetes Care Ayurveda</a></li>
+            <li><a>Lancets & Test Strips</a></li>
+            <li><a>Eyewear</a></li>
+            <li><a>Computer Glasses</a></li>
+            <li><a>Eye Glasses</a></li>
+            <li><a>Sunglasses</a></li>
+            <li><a>Reading Glasses</a></li>
+            <li><a>Contact Lenses (EW)</a></li>
+          </ul>
+         </ul>
+      </li>
+      <li class="dropdown1"><a>Wellness</a>
+        <ul class="menu-area">
+          <ul>
+            <h4>Ayush</h4>
+            <li><a>Ayurvedic</a></li>
+            <li><a>Unani</a></li>
+            <li><a>Homeopathy</a></li>
+            <li><a>Siddha</a></li>
+          </ul>
+          <ul>
+            <h4>Covid Essentials</h4>
+            <li><a>Oxygen Can</a></li>
+            <li><a>Personal & Home Essentials</a></li>
+            <li><a>Business Essentials</a></li>
+            <li><a>Mask, Gloves & Protective Equipment</a></li>
+            <li><a>Travel Essentials</a></li>
+          </ul>
+          <ul>
+            <h4>Diabetes Support</h4>
+            <li><a>Glucometers</a></li>
+            <li><a>Sugar Substitutes</a></li>
+            <li><a>Diabetes Management Supplements</a></li>
+            <li><a>Diabetes Care Ayurveda</a></li>
+            <li><a>Lancets & Test Strips</a></li>
+            <li><a>Eyewear</a></li>
+            <li><a>Computer Glasses</a></li>
+            <li><a>Eye Glasses</a></li>
+            <li><a>Sunglasses</a></li>
+            <li><a>Reading Glasses</a></li>
+            <li><a>Contact Lenses (EW)</a></li>
+          </ul>
+          <ul>
+            <h4> Personal Care</h4>
+            <li><a>Home & Health</a></li>
+            <li><a>Senior Care</a></li>
+            <li><a>Face Personal Care</a></li>
+            <li><a>Hands & Feet</a></li>
+            <li><a>Oral Care</a></li>
+            <li><a>Bath & Shower</a></li>
+            <li><a>Body Care</a></li>
+            <li><a>Personal Care Tools & Accessories</a></li>
+            <li><a>Lip Care</a></li>
+            <li><a> Bathing Accessories</a></li>
+          </ul>
+          <ul>
+            <h4>Fitness</h4>
+            <li><a>Weight Management</a></li>
+            <li><a>Sports Supplements</a></li>
+            <li><a>Smoking Cessation Support</a></li>
+            <li><a>Vitamins And Supplements</a></li>
+            <li><a>Family Nutrition</a></li>
+            <li><a>Health Food And Drinks</a></li>
+            <li><a>Ayurvedic Supplements</a></li>
+          </ul>
+          <ul>
+            <h4>Surgical</h4>
+            <li><a>Respiratory Supplies</a></li>
+            <li><a>Surgical Consumables</a></li>
+            <li><a>Iv Infusion</a></li>
+            <li><a>Surgical Instrument</a></li>
+            <li><a>Dressing</a></li>
+            <li><a>Gi Care</a></li>
+            <li><a>Urinary Care</a></li>
+            <li><a>Wound Treatment</a></li>
+          </ul>
+          <ul>
+            <h4>Mom & Baby</h4>
+            <li><a>Baby Care</a></li>
+            <li><a>Feminine Hygiene</a></li>
+            <li><a>Maternity Care</a></li>
+            <li><a>Baby Bath Time</a></li>
+            <li><a>Toys & Games</a></li>
+            <li><a>Maternity Accessories</a></li>
+          </ul>
+          <ul>
+            <h4>Devices</h4>
+            <li><a>Breathe Easy</a></li>
+            <li><a>Surgical Accessories</a></li>
+            <li><a>Measurements</a></li>
+            <li><a>Orthopaedics</a></li>
+            <h4>Veterinary</h4>
+            <li><a>Petcare</a></li>
+            <li><a>Farm Animals</a></li>
+            <li><a>Aquaculture</a></li>
+          </ul>
+        </ul>
+      </li>
+      <li><a>Lab tests</a></li>
+      <li class="dropdown1"><a>Beauty</a>
+        <ul class="menu-area">
+          <ul>
+            <h4>Fragrances</h4>
+            <li><a>men</a></li>
+            <li><a>Unisex</a></li>
+            <li><a>women</a></li>
+          </ul>
+          <ul>
+            <h4>Hair</h4>
+            <li><a>Hair care</a></li>
+            <li><a>Hair color</a></li>
+            <li><a>Hair styling</a></li>
+            <li><a>Hair tools</a></li>
+            <li><a>Scalp Treatments</a></li>
+            <li><a>Shop by hair type</a></li>
+          </ul>
+          <ul>
+            <h4>Men's Grooming</h4>
+            <li><a>Beard care</a></li>
+            <li><a>Shaving</a></li>
+          </ul>
+          <ul>
+            <h4>Make-up</h4>
+            <li><a>Eyes</a></li>
+            <li><a>Face makeup</a></li>
+            <li><a>lipsmakeup tools & brushes</a></li>
+            <li><a>Nails</a></li>
+          </ul>
+          <ul>
+            <h4>Mom & baby</h4>
+            <li><a> bath time</a></li>
+            <li><a>baby care</a></li>
+            <li><a>Feminine Hygiene</a></li>
+            <li><a>Maternity Accessories</a></li>
+            <li><a>toys & Games</a></li>
+          </ul>
+          <ul>
+            <h4>personal care</h4>
+            <li><a>Bath & shower</a></li>
+            <li><a>Bathing Accessories</a></li>
+            <li><a>Body care</a></li>
+            <li><a>Hands & feet</a></li>
+            <li><a>home care</a></li>
+            <li><a>Lip care</a></li>
+            <li><a>Oral Care</a></li>
+            <li><a>Personal care tools</a></li>
+            <li><a>Senior care</a></li>
+          </ul>
+        </ul>
+      </li>
+      <li><a routerLink="/blog">Health corner</a></li>
+    </ul>
+  </nav>
+</div>
+
+<!-- ................................................................................................ Featured products ......................................................................................................... -->
+<section id="product1" class="section-p1">
+  <h2>Featured Products</h2>
+  <p>Essentials at very low price</p>
+  <div class="pro-container ">
+    <div class="grid three-columns">
+      <div *ngFor="let fea of featureddata"  class="pro">
+        <a routerLink="/product/{{fea.description}}"><img src="../../assets/images/{{fea.description}}.jpg" alt=""></a>
+        <div class="des">
+          <a routerLink="**"><span>{{fea.title}} </span></a><br>
+          <h5>{{fea.description}}</h5><br>
+          <div class="star">{{fea.rating}}<i class="fas fa-star"></i></div><br>
+          <h4>Price{{fea.originalAmount|currency:'INR'}} </h4>
+          <h4 class="percent">{{fea.offerPercentage}}</h4>
+        </div>
+        <div class="icon"><button>Add to cart</button> </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ..................................................................................................banner section.................................................................................................... -->
+<section id="banner" class="section-m1">
+  <h4>ayurvedic medicines</h4>
+  <h2>Up to<span>70% off</span>= All medicines & Products</h2>
+  <button class="ban">Explore Now</button>
+</section>
+
+<!-- ----------------------------offer popup--------------------------- -->
+ <dialog class="offer-popup">
+  <div class="gridOffer">
+  <div class="flash">
+      <i class="fa-solid fa-xmark" (click)="closeOffer()"></i>
+      <img [src]= "environment.imageOfferPopup">
+      <h2>Big Saving days Ends in</h2>
+      <h4> {{demo}} </h4>
+      <button class="explore"> Explore</button>
+  </div>
+</div>
+</dialog>
+
+
+<!-- .....................................................................................................Slide banner.............................................................................................................. -->
+<section id="slide">
+  <div class="slide-container">
+    <h2>Why medcare ?</h2>
+    <div class="slide-box">
+      <img [src] ="environment.imageSlideBanner1">
+      <h1>3 Million +</h1>
+      <p> Registered users as of Mar 31, 2022</p>
+    </div>
+    <div class="slide-box">
+      <img [src] ="environment.imageSlideBanner2">
+      <h1>10 Million + </h1>
+      <p> Orders on Pharmeasy till date and still counting</p>
+    </div>
+    <div class="slide-box">
+      <img [src] = "environment.imageSlideBanner3">
+      <h1> 99000+</h1>
+      <p>Unique items sold in the last 6 months </p>
+    </div>
+    <div class="slide-box">
+      <img [src] ="environment.imageSlideBanner4">
+      <h1>19500+</h1>
+      <p> Pin codes serviced last 3 months</p>
+    </div>
+  </div>
+</section>
+
+<!-- -----------------------------------------------------------BMI------------------------------------------------------------------ -->
+<div class="bmi">
+  <div class="banner-bmi"><img [src] = "environment.imageBmi"></div>
+   <div class="index">
+    <h2>BMI Calculator</h2>
+    <label for="height">Height</label>
+    <input type="number" name="height"  [(ngModel)]="height" placeholder="Height in CM"><br>
+    <label for="weight">Weight</label>
+    <input type="number" name="weight" [(ngModel)]="weight" placeholder="Weight in KG"><br>
+    <button (click)="bmi()">Calculate</button>
+    <h2>{{result}}</h2>
+   </div>
+
+</div>
+
+
+<!-- ----------------------------------------------------Category section------------------------------------------------------------>
+<div class="filter-box">
+  <div class="fil-data">
+    <button (click)="filter('')"><img [src] ="environment.imageCategoryAll"></button>
+  </div>
+  <div class="fil-data">
+    <button (click)="filter('diabetes')"><img [src] ="environment.imageCategoryDiabetics"></button>
+  </div>
+  <div class="fil-data">
+    <button (click)="filter('bone')"><img [src] ="environment.imageCategoryBone"></button>
+  </div>
+  <div class="fil-data">
+    <button (click)="filter('gastro')"><img [src] ="environment.imageCategoryGastro"></button>
+  </div>
+  <div class="fil-data">
+    <button (click)="filter('Skin&care')"><img [src] ="environment.imageCategorySkincare"></button>
+  </div>
+</div>
+
+
+<!-- --------------------------------------------------------All products--------------------------------------------------------------- -->
+<section id="product1" class="section-p1">
+  <h2>All Products</h2>
+  <p>Essentials at very low price</p>
+  <div class="all">
+    <div class="pro-container">
+      <div class="grid three-columns">
+        <!-- 1 -->
+        <div *ngFor="let pro of filtercategory" class="pro">
+          <a routerLink="/product/{{pro.description}}"><img src="../../assets/images/{{pro.description}}.jpg"></a>
+          <div class="des">
+            <a routerLink="**"><span>{{pro.title}} </span></a><br>
+            <h5>{{pro.description}} </h5><br>
+            <div class="star">{{pro.rating}}<i class="fas fa-star"></i></div><br>
+            <h4 class="price" *ngIf="loop==true"> Price{{pro.originalAmount |Price | currency:'INR'}} </h4>
+            <h4 class="price" *ngIf="loop==false"> Price{{pro.originalAmount | currency:'INR'}} </h4>
+            <h4 class="percent">{{pro.offerPercentage}}</h4>
+
+          </div>
+
+          <div class="icon"><button>Add to cart</button> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ...........................................................................................................footer............................................................................................................................... -->
+<app-footer></app-footer>

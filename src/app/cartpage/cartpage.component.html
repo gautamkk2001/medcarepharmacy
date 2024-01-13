@@ -1,0 +1,99 @@
+
+<!--
+  Title : MedCare - Pharmacy
+  Author: Gautam
+  Created at : Febrary 2023
+  Updated at : 13/06/2023
+  Comments  :  -
+  Reviewed by : Gautam
+  Reviewed at  : 13/06/2023 -->
+
+
+<app-navbar></app-navbar>
+
+<section class="noOrder-section" *ngIf="status<=0">
+
+ <img [src] ="environment.imageCartEmpty" style="width:50vw; height:70vh; margin-left: 350px;">
+ <h2 style="text-align: center;">Your cart is Empty</h2>
+</section>
+
+<section class="cart-section" *ngIf="status>0">
+<section id="cart-container" class="cantainer" >
+  <table width="100%" >
+      <thead>
+          <tr>
+              <td>Remove</td>
+              <td>Image</td>
+              <td>Product</td>
+              <td>Price</td>
+              <td>Quantity</td>
+              <td>Total</td>
+          </tr>
+      </thead>
+
+      <tbody *ngFor="let cart of cartproducts">
+        <!-- [formGroup]="input" -->
+          <tr>
+              <td> <a href="#" (click)="delete(cart.id)"><i class="fas far fa-trash-alt"></i></a></td>
+              <td><img  class="img"src="../../assets/images/{{cart.description}}.jpg" alt=""></td>
+              <td>
+                   <h5>{{cart.description}}</h5>
+              </td>
+              <td>
+                  <h5 *ngIf="offer==true">Rs: {{cart.originalAmount |Price}}</h5>
+                  <h5 *ngIf="offer==false">Rs: {{cart.originalAmount }}</h5>
+              </td>
+              <td><button class="minus" (click)="increaseQuantity(cart)">+</button>{{cart.cartQuantity}}<button class="plus" (click)="decreaseQuantity(cart)">-</button></td >
+              <td>
+               <h5 *ngIf="offer==true">Rs:  {{cart.originalAmount | Price}}</h5>
+               <h5 *ngIf="offer==false">Rs: {{subtotal}}</h5>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</section>
+<section id="cart-bottom" class="container">
+  <div class="row">
+      <div class="coupon">
+          <div class="cont-1">
+              <h5>COUPON</h5>
+              <p>Ener your coupon here</p>
+              <input type="text" placeholder="coupon code">
+              <button> APPLY COUPON</button>
+          </div>
+      </div>
+
+      <div class="total">
+          <div class="total-container">
+              <h5>CART TOTAL</h5>
+              <div class="flex">
+                  <h4>Subtotal</h4>
+                  <h4>Rs: {{totalPrice}}</h4>
+              </div>
+              <div class="flex">
+                  <h4>Shipping</h4>
+                  <h4>Rs: 50.00</h4>
+              </div>
+              <div class="flex">
+                  <h4>Total</h4>
+                  <h4>Rs: {{lastprice}}
+                  </h4>
+              </div>
+              <div><a routerLink="/checkout" ><button>Proceed</button></a>
+              </div>
+          </div>
+          </div>
+  </div>
+</section>
+</section>
+
+<dialog class="popup">
+    <div class="placed">
+      <div class="infom">
+        <div class="in">
+         <h2><i class="far fa-times"></i></h2>
+         <p>Order placed</p>
+        </div>
+        </div>
+    </div>
+</dialog>

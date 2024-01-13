@@ -1,0 +1,361 @@
+section{
+  background: #fff;
+}
+
+h1{
+ padding:8px 0px 8px 2px;
+}
+
+details summary{
+ /* visibility: hidden; */
+ cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.box{
+  width:300px;
+  height: 250px;
+  background-color: hotpink;
+  margin-left: 10px;
+  border-radius: 10%;
+}
+.patient-pres img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+.rx-button{
+  background-color: #fff;
+  color: black;
+  border: none;
+  outline: none;
+  padding: 5px;
+  justify-self: center;
+
+}
+
+.box h3{
+  text-align: center;
+}
+
+
+/* order */
+.ordersection{
+ display:flex;
+ margin-top: 10px;
+
+}
+
+.grid-columns{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.orders{
+  width:300px;
+  height:280px;
+  background-color: #97b9e4;
+  margin-left: 10px;
+  /* display: grid; */
+
+  /* grid-template-columns: repeat(3, 1fr); */
+
+}
+
+.orders .orderImgs{
+  display: block;
+  padding: 10px;
+  height:100px;
+  margin-bottom: 10px;
+
+}
+
+.orders .orderImgs img{
+ width:100px;
+ height: 100px;
+ padding: 10px;
+}
+
+.orders h2{
+  padding:10px;
+  font-size: 25px;
+}
+
+.orders span{
+ padding-left: 10px;
+ font-size: 20px;
+}
+
+.orders button{
+  background-color: rgb(232, 93, 42);
+  color: black;
+  height: 45px;
+  margin-left: 20px;
+  margin-top: 10px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* order details */
+.viewDetails, .refund {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background:none;
+  border: none;
+}
+
+.viewDetails::backdrop, .refund::backdrop{
+  background-color: black;
+  opacity: 0.9;
+}
+
+.viewbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  /* background-color: #f16565; */
+}
+
+.viewbox .details {
+  text-align: center;
+  vertical-align: middle;
+  margin: 4rem;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  background-color: #fff;
+
+}
+
+.viewbox .details h2 {
+ font-size: 22px;
+ color: green;
+ padding: 8px;
+}
+
+.viewbox .details h4 {
+  font-size: 20px;
+  color: rgb(54, 53, 52);
+  padding: 8px;
+}
+
+.viewbox .details p {
+  font-size: 18px;
+  color: rgb(233, 71, 34);
+  padding: 8px;
+}
+
+.viewbox .details a{
+ margin-left: 95%;
+ background-color: rgb(235, 39, 39);
+ padding: 1px 7px 1px 7px;
+ border-radius: 50%;
+ cursor: pointer;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 98%;
+  margin:10px;
+  background: #4da4da;
+
+}
+th{
+  background: #4da4da;
+  /* width:100%; */
+}
+td{
+  background: #9cc9e5;
+}
+td, th {
+  text-align: left;
+  padding:15px;
+  color: #1f1919;
+  border-bottom: 1px solid #81818140;
+}
+
+.newOrder{
+  width: 800px;
+  height: 150px;
+  background-color: #a7dae9;
+  margin: 15px 0px 10px 50px;
+
+}
+
+.orderDiv{
+  display: flex;
+  padding: 15px;
+}
+
+.orderImg img{
+  width:150px;
+  height: 120px;
+}
+
+.orderDetails{
+  margin-left: 60px;
+  width: 350px;
+}
+
+.orderDetails h2{
+  font-size: 25px;
+}
+
+.orderDetails h4{
+  font-size: 22px;
+}
+
+.orderDetails h5{
+ margin-top: 10px;
+ font-size: 20px;
+}
+
+.reButton button{
+  width:55px;
+  height: 40px;
+  margin-top: 25px;
+  margin-left: 40px;
+  background-color: #e88812;
+  outline: none;
+  border:none;
+  border-color: none;
+  padding: 5px;
+
+}
+
+/* pprint */
+.print button{
+  width:55px;
+  height: 40px;
+  margin-top: 25px;
+  margin-left: 500px;
+  background-color: #12e88b;
+  outline: none;
+  border:none;
+  border-color: none;
+  padding: 5px;
+}
+
+.printDialog{
+  /* margin-left: 300px; */
+  width: 100%;
+  height: 100vh;
+
+}
+
+/* Print Payment */
+
+.content {
+  font-family: sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  margin: auto;
+  width: 400px;
+  height: 250px;
+}
+
+.content p {
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+.content span {
+  font-weight: bold;
+  margin: 0;
+}
+/*
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #233863;
+  background: linear-gradient(to bottom, #ebd3d3,#faf0f0);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #233863;
+} */
+
+@media(max-width: 480px){
+  section{
+    background: #fff;
+    padding-top: 35rem;
+  }
+  .newOrder{
+    width: 400px;
+    height: max-content;
+    background-color: #FFFFFF;
+    margin: 15px 0px 10px 20px;
+  }
+  .orderDiv{
+    display: block;
+    padding: 15px;
+  }
+  .orderImg img{
+    width:220px;
+    height: 140px;
+    margin:15px;
+  }
+  .reButton button{
+    width:55px;
+    height: 40px;
+    margin-top: 25px;
+    margin-left: 100px;
+    background-color: #e88812;
+    outline: none;
+    border:none;
+    border-color: none;
+    padding: 5px;
+
+  }
+}

@@ -1,0 +1,82 @@
+<app-sidebar></app-sidebar>
+
+<div id="main">
+
+  <div class="product-container" *ngIf="(showProducts==true)">
+    <div class="box-8">
+      <div class="content-box"  >
+
+        <p>Products</p>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col">Description</th>
+              <th scope="col">Price</th>
+              <th scope="col">Rating</th>
+              <th scope="col">Images</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let pro of products">
+              <td>{{pro.title}}</td>
+              <td>{{pro.description}}</td>
+              <td>{{pro.originalAmount}}</td>
+              <td>{{pro.rating}}</td>
+              <td><img src="../../assets/images/{{pro.description}}.jpg" style="width: 40px; height: 45px;"></td>
+              <td>
+                <button  type="button"  class="adminButton" (click)="callEdit(pro)">Edit</button>
+                <button  type="button"  class="adminButton" (click)="callDelete(pro.id)">Delete</button>
+
+              </td>
+          </tr>
+          </tbody>
+        </table>
+
+</div>
+</div>
+  </div>
+</div>
+
+
+<div class="edit-products" *ngIf="(showEdit==true)">
+  <div class="editing">
+    <div>Edit</div>
+    <div class="close" (click)="closeEdit()">x</div>
+  </div>
+    <form [formGroup]="editproducts" (ngSubmit)="  updateProduct()">
+      <div class="user-details">
+           <div class="input-box">
+              <label>Title</label>
+              <input type="text" required formControlName="title">
+            </div>
+           <div class="input-box">
+              <label>Description</label>
+              <input type="text" required formControlName="description">
+            </div>
+           <div class="input-box">
+              <label>Details</label>
+              <input type="text" required formControlName="details">
+            </div>
+           <div class="input-box">
+              <label>Price</label>
+              <input type="text" required formControlName="originalAmount">
+              </div>
+           <div class="input-box">
+              <label>OfferPercentage</label>
+              <input type="text" required formControlName="offerPercentage">
+           </div>
+           <div class="input-box">
+              <label> Stock</label>
+              <input type="number" required formControlName="stock">
+            </div>
+
+            <div class="button">
+              <button >Edit</button>
+            </div>
+      </div>
+    </form>
+</div>

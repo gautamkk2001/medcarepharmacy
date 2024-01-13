@@ -1,0 +1,56 @@
+
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  margin-left: 120px;
+}
+
+
+.container-products{
+	width: 1000px;
+  margin-left: 300px;
+}
+
+.container-4{
+	width: 30%;
+	float: left;
+}
+.content-box{
+	padding: 20px;
+}
+.content-box p{
+	margin: 0px;
+  font-size: 20px;
+  color: #f7403b;
+}
+
+.content-box p span{
+	float: right;
+    background-color: #ddd;
+    padding: 3px 10px;
+    font-size: 15px;
+}
+.box-8{
+	width: 95%;
+	background-color: #272c4a;
+	height: 100%;
+}
+.nav2{
+	display: none;
+}
+
+.box-8{
+	margin-left: 10px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  text-align: left;
+  padding:15px;
+  color: #ddd;
+  border-bottom: 1px solid #81818140;
+}

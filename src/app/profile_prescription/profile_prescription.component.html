@@ -1,0 +1,169 @@
+
+<!--
+  Title : MedCare - Pharmacy
+  Author: Gautam
+  Created at : Febrary 2023
+  Updated at : 13/06/2023
+  Comments  :  -
+  Reviewed by : Gautam
+  Reviewed at  : 13/06/2023 -->
+
+
+<section>
+<div *ngIf="(showOrder==true)">
+<div class="newOrder" *ngFor="let item of specificOrder |reverse">
+  <div class="orderDiv" >
+     <div class="orderImg">
+      <img src="../../assets/images/{{item.product}}.jpg">
+     </div>
+     <div class="orderDetails">
+      <h2>Delivery : {{item.delivered}}</h2>
+      <h4>{{item.product}}</h4>
+      <h5>Total : Rs-{{item.price}}</h5>
+      <h5>OrderId: {{item.orderId}}</h5>
+     </div>
+     <div class="reButton">
+      <button class="reButton" (click)="clicking(item)">View</button></div>
+  </div>
+</div>
+</div>
+
+<!-- <div *ngIf="(showInvoice==true)">
+<div class="newOrder" *ngFor="let item of proId |reverse">
+  <div class="orderDiv" >
+     <div class="orderImg">
+      <img src="../../assets/images/{{item.product}}.jpg">
+     </div>
+     <div class="orderDetails">
+      <h2>Delivery : {{item.delivered}}</h2>
+      <h4>{{item.product}}</h4>
+      <h5>Total : Rs-{{item.price}}</h5>
+      <h5>OrderId: {{item.orderId}}</h5>
+     </div>
+    <button ></button>
+      <div class="reButton">
+      <button [disabled]="test(item.checkDate)"> {{item.checkDate}} Return</button></div>
+  </div>
+</div>
+</div> -->
+
+<div class="box-8" *ngIf="(showInvoice==true)">
+  <div class="reButton">  <button (click)="back()">Back</button></div>
+
+  <div class="content-box"  >
+
+    <table class="table">
+      <thead>
+        <tr><th colspan="6">Invoice</th></tr>
+        <tr>
+          <th>Order Id</th>
+          <th scope="col">Description</th>
+          <th scope="col">Images</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let pro of proId">
+          <td>{{pro.orderId}}</td>
+          <td>{{pro.product}}</td>
+          <td><img src="../../assets/images/{{pro.product}}.jpg" style="width: 40px; height: 45px;"></td>
+          <td>{{pro.price}}</td>
+      </tr>
+       <tr>
+        <td></td>
+        <td></td>
+        <td>Total :</td>
+        <td>{{orderIdTotal}}</td>
+       </tr>
+      </tbody>
+    </table>
+      <div class="print"><button (click)="printForm()">Print</button></div>
+</div>
+</div>
+
+<!-- <dialog class="printDialog" [open]="printing">
+  <h2 style="text-align: center;">Payment Successfully</h2>
+  <div class="content">
+    <p><span>Patient Name:</span> {{printName}}</p>
+    <p><span>Doctor Name:</span> {{printDoctorName}}</p>
+    <p><span>Doctor Field:</span> {{printDoctorField}}</p>
+    <p><span>Appointed Date:</span> {{printAppointmentDate}}</p>
+    <p><span>Consulting Fee:</span> {{printConFee}}</p>
+    <p><span>Other Fee:</span> {{printOthFee}}</p>
+    <p><span>Total Fee:</span> {{printTotFee}}</p>
+    <p style="color: green"><span>Payment Status:</span> {{printStatus}}</p>
+  </div>
+  <br>
+  <div style="margin-left: 400px;">
+  <button (click)="printForm()">Print</button>
+  <button (click)="back()" id="back">Back</button>
+</div>
+</dialog> -->
+
+
+
+</section>
+
+
+<!-- unused -->
+<!--
+<dialog class="viewDetails">
+  <div class="viewbox">
+   <div class="details">
+    <a (click)="closeModal()">x</a>
+     <h2> Order Details</h2>
+     <h4>Oder Id: 75489621</h4>
+     <h4>Medicine Products  </h4>
+     <h4>Order Confirmed on, Jun 22</h4>
+     <h4>Delivery excepted by, {{orderDates.date}}</h4>
+     <p>Need help?</p>
+   </div>
+  </div>
+ </dialog>
+
+ <dialog class="refund">
+  <div class="viewbox">
+    <div class="details">
+         <a (click)="closeModal()">x</a>
+        <h2>Refund Status</h2>
+        <h4>Your Amount will refunded within 1-2 Hours</h4>
+    </div>
+  </div>
+ </dialog> -->
+
+<!--
+<details>
+  <summary><h1>Upcoming Orders</h1></summary>
+
+   <div class="ordersection" *ngFor="let i of specificOrder">
+    <div class="grid-columns" *ngIf="i.orderDate <= currentDate">
+    <div class="orders"  *ngFor="let item of specificOrder">
+      <div  *ngIf="item.deliveryDate>=currentDate && item.orderDate <= currentDate">
+       <h2>Arriving on: {{item.deliveryDate}}th</h2><span>Total: Rs-{{item.price}}</span>
+       <div class="orderImgs" >
+       <img   src="../../assets/images/{{item.product}}.jpg">
+      </div>
+      <button (click)="details()">View Details</button>
+      <button (click)="cancel()">Cancel Order</button>
+    </div>
+    </div>
+   </div>
+  </div>
+  </details> -->
+
+  <!-- <details>
+  <summary><h1>Previous Orders</h1></summary>
+
+  <div class="ordersection"  >
+    <div class="grid-columns"  >
+    <div class="orders" *ngFor="let  item of menu; let i=index">
+       <h2 style="color:rgb(74, 124, 231)">{{item.description}}</h2><span>Total: Rs-{{item.originalAmount}}</span>
+       <div class="orderImgs" >
+       <img   src="../../assets/images/{{item.description}}.jpg">
+      </div>
+      <h2>Ordered on: {{date[i]}}</h2>
+    </div>
+   </div>
+  </div>
+  </details> -->

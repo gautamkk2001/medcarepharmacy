@@ -1,0 +1,36 @@
+
+<app-sidebar></app-sidebar>
+<body>
+  <div id="main">
+
+    <div class="container-products">
+  <div class="box-8">
+    <div class="content-box">
+
+      <p>Order History </p>
+      <br />
+      <table>
+
+        <tr>
+          <th>Name</th>
+          <th>Image</th>
+          <th>Price</th>
+          <th>Ordered On</th>
+        </tr>
+        <tr *ngFor="let  item of menu; let i=index">
+          <td>{{item.description}}</td>
+          <td> <img   src="../../assets/images/{{item.description}}.jpg" style="width: 70px; height: 75px;"></td>
+          <td>{{item.originalAmount}}</td>
+          <td> {{date[i]}}</td>
+        </tr>
+
+      </table>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+</body>
+
+

@@ -1,0 +1,113 @@
+.product-container{
+	position:relative;
+	width: 1000px;
+  left: 400px;
+  margin-top: 25px;
+}
+.content-box p{
+	margin: 0px;
+  font-size: 20px;
+  color: #f7403b;
+}
+
+.content-box{
+	padding: 20px;
+}
+
+.box-8 {
+	width: 95%;
+	background-color: #272c4a;
+	height: 100%;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  text-align: left;
+  padding:15px;
+  color: #ddd;
+  border-bottom: 1px solid #81818140;
+}
+
+.adminButton{
+  border:none;
+  outline:none;
+  color:#6b9324;
+  margin:2px;
+  margin-left: 8px;
+  padding:5px;
+ }
+
+ .adminButton a{
+  text-decoration: none;
+  border:none;
+ outline:none;
+ color:#6b9324;
+ margin:2px;
+ margin-left: 2px;
+ padding:5px;
+  }
+
+
+  /* try */
+  .edit-products{
+    margin-left:400px;
+    max-width: 900px;
+    width:900px;
+    background: #f2f7fa;
+    padding: 25px;
+    border-radius: 8px;
+    margin-right: 0px;
+    justify-content: center;
+  }
+
+  .edit-products .editing{
+    font-size: 30px;
+    font-weight: 500;
+    display:flex;
+  }
+  .edit-products .editing .close{
+    margin-left: 92%;
+  }
+  .edit-products form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+  }
+  form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+  }
+  .user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+   border: 1px solid #5b7396;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease-in-out;
+ }
+ .user-details .input-box .details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+form .button button{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-weight: 500;
+  outline: none;
+  font-size: 20px;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  background: #34d77b;
+  border-color: #34d77b;
+}

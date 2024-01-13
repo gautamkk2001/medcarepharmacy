@@ -1,0 +1,71 @@
+
+<!--
+  Title : MedCare - Pharmacy
+  Author: Gautam
+  Created at : Febrary 2023
+  Updated at : 13/06/2023
+  Comments  :  -
+  Reviewed by : Gautam
+  Reviewed at  : 13/06/2023 -->
+
+
+  <!-- --------------------------------------------------navbar----------------------------------------------------------------------- -->
+<app-navbar></app-navbar>
+
+<!-- .........................................................................................product images....................................................................................................................... -->
+<div id="prodetails" class="section-p1">
+<div class="Single-pro-img">
+  <img  class="main" src="../../assets/images/{{finaldescription.description}}.jpg" width="100%" id="main-img" alt="">
+  <div class="s-img-grp">
+    <div class="small-imgs" >
+      <img src="../../assets/images/{{finaldescription.description}}1.jpg" width="100%" id="small1" alt="" appGallery>
+    </div>
+    <div class="small-imgs">
+      <img src="../../assets/images/{{finaldescription.description}}2.jpg" width="100%" id="small2" alt="" appGallery/>
+    </div>
+    <div class="small-imgs">
+      <img src="../../assets/images/{{finaldescription.description}}3.jpg" width="100%" id="small3" alt="" appGallery/>
+    </div>
+    <div class="small-imgs">
+      <img src="../../assets/images/{{finaldescription.description}}.jpg" width="100%" id="small4" alt="" appGallery/>
+    </div>
+  </div>
+  <div class="delivery">
+  <h3>If Ordered within</h3>
+   <p>{{remainingHours}} Hours {{remainingMinutes}} Min {{seconds}}s</p>
+   <h4>Delivered Tomorrow</h4>
+</div>
+</div>
+
+
+<!-- .....................................................................................................product details.................................................................................................... -->
+<div class="details-pro">
+
+  <h5><a routerLink="/product"> Home / products</a></h5>
+  <h3> {{finaldescription.description}}</h3>
+  <h2 *ngIf="offer==false"> {{finaldescription.originalAmount|currency:'INR'}}</h2>
+  <h2 *ngIf="offer==true"> {{finaldescription.originalAmount| Price |currency:'INR'}}</h2>
+  <h3>Unit</h3>
+  <input type="number" value="1">
+  <a routerLink="/cart"><button (click)="addedCart(finaldescription)">Add to cart</button></a>
+   <button class="wishlist" (click)="wishlist(finaldescription)"><i class='bx bxs-heart bx-border-circle' ></i></button>
+   <h3 style="color:green">Stock Available  : {{finaldescription.stock}}</h3>
+   <h3 style="color:rgb(28, 125, 211); margin-top:5px">Best Before  : {{finaldescription.expiryDate}}</h3>
+  <h4>Product details</h4>
+  <span><p>{{finaldescription.details|json}}</p></span>
+</div>
+</div>
+
+
+<div class="review-section">
+  <div>
+        <div *ngFor="let item of reviews">
+             <h1>{{item.username}}</h1>
+              <h3>{{item.product}}</h3>
+              <p>{{item.Feedback}}</p>
+        </div>
+  </div>
+</div>
+
+
+<app-footer></app-footer>

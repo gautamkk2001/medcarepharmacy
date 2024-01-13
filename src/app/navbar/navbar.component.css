@@ -1,0 +1,253 @@
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: #272c4a;
+  position: sticky;
+
+}
+
+.logo {
+  width: 50px;
+  padding-left: 30px;
+}
+
+#header h2 {
+  padding-right: 350px;
+  color:#0da3d6;
+  font-weight: 800;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.mar{
+  display:flex;
+}
+#navbar #searchbox {
+  height: 35px;
+  margin-top: 10px;
+  width: 170px;
+  border-radius: 12px;
+  border-color: rgb(86, 17, 129);
+}
+#navbar li {
+  list-style: none;
+  padding: 0 30px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  color: #0da3d6;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 800;
+  font-size: 21px;
+  transition: 0.3s ease;
+}
+
+#navbar li a i{
+  margin-right: 8px;
+}
+/* #navbar li a:hover {
+    color:rgb(92, 230, 103);
+} */
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: rgb(191, 195, 188);
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: rgb(229,229,229);
+  position: absolute;
+  bottom: -4px;
+  left: 30px;
+}
+
+#mobile {
+  display: none;
+  align-items: center;
+}
+
+#close {
+  display: none;
+}
+
+@media (max-width: 480px) {
+
+  /* #navbar {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  #header {
+    width:480px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: #272c4a;
+    position: sticky;
+  }
+
+  #navbar li {
+    list-style: none;
+    padding: 0 1px;
+    position: relative;
+  }
+
+  .links{
+    padding:0;
+  } */
+
+.links
+{
+  display: block;
+  position: relative;
+  top: 70px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.links a
+{
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+.links a:hover
+{
+  color: tomato;
+}
+
+.links input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+.links span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+.links span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+.links span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+.links input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+.links input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+.links input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+#navbar
+{
+  /* position: absolute; */
+  width: 400px;
+  margin: -90px 0 0 -50px;
+  padding: 50px;
+  padding-top: 120px;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+
+
+#navbar li
+{
+  padding: 10px 0;
+  font-size: 22px;
+  display:flex;
+}
+
+
+#navbar ul li a{
+  display: flex;
+}
+
+.mar{
+  display:block;
+  width:450px;
+}
+.links
+{
+  display: block;
+  position: relative;
+  top: 70px;
+  left: 50px;
+  z-index: 1;
+  width:450px;
+}
+
+html{
+  width:480px;
+}
+
+}
+

@@ -1,0 +1,38 @@
+
+<!--
+  Title : MedCare - Pharmacy
+  Author: Gautam
+  Created at : Febrary 2023
+  Updated at : 13/06/2023
+  Comments  :  -
+  Reviewed by : Gautam
+  Reviewed at  : 13/06/2023 -->
+
+
+<section id="header">
+
+
+    <h2><a routerlink="product"><i class="fa-sharp fa-solid fa-heart-pulse"></i>Medcare</a></h2>
+
+  <div class="mar">
+    <div>
+      <marquee direction="right" scrollamount="4"><img [src] ="environment.imageNavbarDelivery" width="50px"></marquee>
+    </div>
+
+    <div class="links">
+
+    <ul id="navbar">
+
+      <li><a routerLink="/home" routerLinkActive="active"  id="kk"><i class="bx bx-home"></i>Home</a></li>
+      <li><a routerLink="/product" routerLinkActive="active" ><i class='bx bx-capsule'></i>Products</a></li>
+      <!-- <li><input type="search" placeholder="&nbsp;Search here" id="searchbox" ></li> -->
+      <li><a routerLink="/accountdetail"><i class="bx bx-user"></i>Profile</a></li>
+      <li><a routerLink="/cart" routerLinkActive="active" ><i class="bx bx-cart"></i>Cart</a></li>
+      <li><a routerLink="/main" routerLinkActive="active" *ngIf="!loginstatus" ><i class="bx bx-log-in"></i>Login</a></li>
+      <li><a (click)="logout()" *ngIf="loginstatus">Logout<i class="fa-solid fa-right-to-bracket"></i></a></li>
+    </ul>
+  </div>
+  </div>
+</section>
+
+

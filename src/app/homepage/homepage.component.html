@@ -1,0 +1,214 @@
+
+<!--
+  Title : MedCare - Pharmacy
+  Author: Gautam
+  Created at : Febrary 2023
+  Updated at : 13/06/2023
+  Comments  :  -
+  Reviewed by : Gautam
+  Reviewed at  : 13/06/2023 -->
+
+
+<app-navbar></app-navbar>
+<section class="home">
+
+  <div class="home_img">
+    <img [src] ="environment.imageHomeMain">
+  </div>
+
+  <div class="home_content">
+    <span>Quality Chemist and Druggist!!!</span>
+    <h3>YOUR DOOR STEP PHARMACY!</h3>
+    <a routerLink="/ad" class="link">Get Started</a>
+  </div>
+</section>
+
+<!-- Banner images -->
+<section class="banner-container">
+  <div class="banner">
+    <img [src] ="environment.imageHomeBanner1">
+    <div class="content">
+      <h3>Special Offer</h3>
+      <p>Upto 45% off</p>
+    <a routerLink="/side" class="link">Checkout</a>
+    </div>
+  </div>
+
+  <div class="banner">
+    <img [src] ="environment.imageHomeBanner2">
+    <div class="content">
+      <h3>Special Offer</h3>
+      <p>Upto 45% off</p>
+    <a routerLink="/product" class="link">Checkout</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- review -->
+
+<div class="review-section">
+  <div class="inner">
+    <h2>Customer's Reviews</h2>
+
+    <div class="border"></div>
+    <div class="row-review">
+      <div class="col-review">
+        <div class="reviews">
+          <img src = "../../assets/images/boy.png">
+          <div class="reviewer-name">Gautam</div>
+          <div class="stars-review">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>{{environment.textHomeReview1}}</p>
+        </div>
+      </div>
+
+      <div class="col-review">
+        <div class="reviews">
+          <img src = "../../assets/images/man.png">
+          <div class="reviewer-name">Manikandan</div>
+          <div class="stars-review">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>{{environment.textHomeReview2}}</p>
+        </div>
+      </div>
+
+      <div class="col-review">
+        <div class="reviews">
+          <img src ="../../assets/images/man1.png">
+          <div class="reviewer-name">Vigneshwaran</div>
+          <div class="stars-review">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>{{environment.textHomeReview3}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section class="about-container">
+<h3> Effortless Online Medicine Orders at Medcare  Pharmacy</h3>
+<p>{{environment.textHomeAbout1}}</p>
+
+<h3>Reasons To Buy Medicine From Medcare Pharmacy</h3>
+<p>{{environment.textHomeAbout2}}</p>
+
+<h3>Most Trusted Online Medical Store Of India</h3>
+<p>{{environment.textHomeAbout3}}</p>
+
+<h3>Extra Benefits Of Online Medicine Orders</h3>
+<p>{{environment.textHomeAbout4}}</p>
+
+</section>
+
+<!-- contact -->
+<section class="contact-section">
+  <div class="contact-bg">
+     <h3>Get in touch us</h3>
+     <div class= "line">
+         <div></div>
+         <div></div>
+         <div></div>
+     </div>
+     <p class="text">medcare is an online pharmacy store. which sells the medicines and all other health related products
+         which is very affordadle and free home delivery available and had 10 million plus customers and delivered a millions
+         of products across the country. If you want to say something your suggestions are always welcome.</p>
+  </div>
+
+  <div class="contact-body">
+      <div class="contact-info">
+         <div>
+             <span><i class="fas fa-mobile-alt"></i></span>
+             <span>phone No.</span>
+             <span class="text">9865451374</span>
+         </div>
+         <div>
+             <span><i class="fas far fa-envelope-open"></i></span>
+             <span>Email.</span>
+             <span class="text">mail&#64;company.com</span>
+         </div>
+         <div>
+             <span><i class="fas fas fa-map-marker-alt"></i></span>
+             <span>Address.</span>
+             <span class="text">45, Park Street , Erode</span>
+         </div>
+         <div>
+             <span><i class="fas far fa-clock"></i></span>
+             <span>Working hours.</span>
+             <span class="text">Monday-Friday (9:00 am - 5:00pm)</span>
+         </div>
+      </div>
+
+      <div class="contact-form">
+        <form  [formGroup]="contactForm" (submit)="submitContactForm()">
+          <div class="name">
+            <input
+            type="text" autocomplete="off" pattern="^[A-Z a-z]{3,15}$" name="uname" placeholder="FirstName"
+            class="input" formControlName="firstname1" class="form-control"/>
+
+            <div class="information-error" *ngIf="contactForm.controls['firstname1'].dirty">
+              <p class="error" *ngIf="contactForm.controls['firstname1'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>&numsp; FirstName is not Empty</p>
+              <p class="error" *ngIf="contactForm.controls['firstname1'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>&numsp; Enter the correct FirstName</p>
+            </div>
+            <input type="text" autocomplete="off" pattern="^[A-Z a-z]{1,8}$" name="lname" placeholder="LastName"
+            class="input" formControlName="lastname1" class="form-control" />
+            <div class="information-error" *ngIf="contactForm.controls['lastname1'].dirty">
+              <p class="error" *ngIf="contactForm.controls['lastname1'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>&numsp;lastName is not Empty</p>
+              <p class="error" *ngIf="contactForm.controls['lastname1'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>&numsp; Enter the correct LastName</p>
+            </div>
+          </div>
+          <div>
+            <input type="email" autocomplete="off" pattern="^[a-z 0-9]+[@][a-z]+[\.]+[a-z]{2,3}$" name="email" placeholder="Email-id"
+            class="input"   formControlName="email1" class="form-control" />
+
+            <div class="information-error" *ngIf="contactForm.controls['email1'].dirty">
+              <p class="error" *ngIf="contactForm.controls['email1'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>&numsp; Email-id is not Empty</p>
+              <p class="error" *ngIf="contactForm.controls['email1'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>&numsp; Enter the correct email-id</p>
+            </div>
+            <input type="tel" autocomplete="off" pattern="^[6-9]{1}[0-9]{9}$" name="mobile" placeholder="Mobileno"
+            class="input"   formControlName="mobile1" class="form-control"  />
+            <div class="information-error" *ngIf="contactForm.controls['mobile1'].dirty">
+              <p class="error" *ngIf="contactForm.controls['mobile1'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>&numsp; Email-id is not Empty</p>
+              <p class="error" *ngIf="contactForm.controls['mobile1'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>&numsp; Enter the correct email-id</p>
+          </div>
+        </div>
+          <textarea rows="5"placeholder="message" class="form-control" formControlName="message1"></textarea>
+          <div class="information-error" *ngIf="contactForm.controls['message1'].dirty">
+            <p class="error1" *ngIf="contactForm.controls['message1'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>&numsp; Messagebox is not Empty</p>
+          </div>
+            <br>
+          <button [disabled]="!contactForm.valid"  class="send-btn">Submit</button>
+        </form>
+
+         <div>
+             <img src="../../assets/images/call-doctor-289.webp" alt="">
+         </div>
+      </div>
+
+  </div>
+
+  <div class="map">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62589.38973092332!2d77.68037733091721!3d11.346624085573197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba96f46762f4671%3A0xd97da6e3d9c7f75e!2sErode%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1665900302195!5m2!1sen!2sin"
+     width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+</section>
+
+
+<app-footer></app-footer>
